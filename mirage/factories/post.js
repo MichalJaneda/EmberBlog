@@ -1,12 +1,12 @@
 import { Factory, faker } from 'ember-cli-mirage';
-import 'moment';
+import moment from 'moment';
 
 export default Factory.extend({
   id(i) {
     return i;
   },
   slug() {
-    return faker.lorem.words(2).replace(' ', '-');
+    return faker.lorem.words(2).replace(' ', '-')
   },
   title() {
     return faker.lorem.sentence();
@@ -18,9 +18,9 @@ export default Factory.extend({
     return faker.lorem.paragraphs(10)
   },
   created_at(i) {
-    return moment().subtract(i + 1, 'days');
+    return moment().subtract(i + 1, 'days')
   },
   updated_at(i) {
-    return moment().subtract(i, 'days');
+    return moment().subtract(i, 'days')
   }
 });

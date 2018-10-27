@@ -8,6 +8,7 @@
           {{utc post.created_at}}
         </time>
         <p>{{post.lead}}</p>
+        {{#link-to "posts.show" post}}More{{/link-to}}
       </article>
     </div>
   </div>

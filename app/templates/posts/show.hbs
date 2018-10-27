@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col">
+    <article>
+      <h2>{{model.title}}</h2>
+      <time class="text-muted"
+            datetime="{{moment-format model.created_at}}">
+        {{utc model.created_at}}
+      </time>
+      <h3>{{model.lead}}</h3>
+      <p>{{model.body}}</p>
+    </article>
+  </div>
+</div>
